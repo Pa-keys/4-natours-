@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Local Marketplace</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="/js/main.js"></script>
+</head>
+<body data-page="signup">
+    <div class="app-shell">
+        <header class="app-header">
+            <a class="brand" href="/">Local Marketplace</a>
+            <div class="auth-actions" data-auth-shell></div>
+        </header>
+
+        <main class="form-box">
+            <h1>Sign Up</h1>
+            <p class="lead">Create an account to browse products and manage marketplace listings.</p>
+            <p class="message" data-message></p>
+
+            <form id="signupForm">
+                <div class="form-group">
+                    <label class="form-label" for="name">Name</label>
+                    <input class="form-input" id="name" name="name" type="text" autocomplete="name" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-input" id="email" name="email" type="email" autocomplete="email" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="password">Password</label>
+                    <input class="form-input" id="password" name="password" type="password" minlength="8" autocomplete="new-password" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="passwordConfirm">Confirm Password</label>
+                    <input class="form-input" id="passwordConfirm" name="passwordConfirm" type="password" minlength="8" autocomplete="new-password" required>
+                </div>
+                <button class="button button--full" type="submit">Create Account</button>
+            </form>
+
+            <p class="message">Already have an account? <a href="/login">Login</a>.</p>
+        </main>
+    </div>
+</body>
+</html>

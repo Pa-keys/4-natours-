@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Local Marketplace</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="/js/main.js"></script>
+</head>
+<body data-page="login">
+    <div class="app-shell">
+        <header class="app-header">
+            <a class="brand" href="/">Local Marketplace</a>
+            <div class="auth-actions" data-auth-shell></div>
+        </header>
+
+        <main class="form-box">
+            <h1>Login</h1>
+            <p class="lead">Use your account to access products and manage listings.</p>
+            <p class="message" data-message></p>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-input" id="email" name="email" type="email" autocomplete="email" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="password">Password</label>
+                    <input class="form-input" id="password" name="password" type="password" autocomplete="current-password" required>
+                </div>
+                <button class="button button--full" type="submit">Login</button>
+            </form>
+
+            <p class="message">No account yet? <a href="/signup">Create one</a>.</p>
+        </main>
+    </div>
+</body>
+</html>

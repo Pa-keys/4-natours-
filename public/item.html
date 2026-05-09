@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Local Marketplace</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="/js/main.js"></script>
+</head>
+<body data-page="item">
+    <div class="app-shell">
+        <header class="app-header">
+            <a class="brand" href="/">Local Marketplace</a>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="/overview" data-nav="overview">Products</a>
+                <a href="/add-item" data-nav="add">Add Product</a>
+                <a href="/stats" data-nav="stats">Stats</a>
+            </nav>
+            <div class="auth-actions" data-auth-shell></div>
+        </header>
+
+        <main>
+            <div class="page-head">
+                <div>
+                    <h1>Product Details</h1>
+                    <p class="lead">View the selected marketplace listing.</p>
+                </div>
+                <a href="/overview" class="button button--secondary">&larr; Back to Products</a>
+            </div>
+
+            <p class="message" data-message></p>
+            <div id="product-detail"></div>
+        </main>
+    </div>
+</body>
+</html>

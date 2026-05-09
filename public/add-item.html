@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Product - Local Marketplace</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="/js/main.js"></script>
+</head>
+<body data-page="product-form">
+    <div class="app-shell">
+        <header class="app-header">
+            <a class="brand" href="/">Local Marketplace</a>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="/overview" data-nav="overview">Products</a>
+                <a href="/add-item" data-nav="add">Add Product</a>
+                <a href="/stats" data-nav="stats">Stats</a>
+            </nav>
+            <div class="auth-actions" data-auth-shell></div>
+        </header>
+
+        <main>
+            <a href="/overview" class="button button--secondary">&larr; Back to Products</a>
+
+            <section class="form-box">
+                <h1 id="formTitle">Add Product</h1>
+                <p id="formIntro" class="lead">Create a new marketplace listing.</p>
+                <p class="message" data-message></p>
+
+                <form id="productForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Product Name</label>
+                            <input class="form-input" id="name" name="name" type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="price">Price</label>
+                            <input class="form-input" id="price" name="price" type="number" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="category">Category</label>
+                            <input class="form-input" id="category" name="category" type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="location">Location</label>
+                            <input class="form-input" id="location" name="location" type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="seller">Seller</label>
+                            <input class="form-input" id="seller" name="seller" type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="image">Image Symbol</label>
+                            <input class="form-input" id="image" name="image" type="text" placeholder="Optional">
+                        </div>
+                        <div class="form-group form-group--wide">
+                            <label class="form-label" for="description">Description</label>
+                            <textarea class="form-input" id="description" name="description" maxlength="300" required></textarea>
+                        </div>
+                    </div>
+
+                    <button id="submitProduct" type="submit" class="button button--full">Save Product</button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

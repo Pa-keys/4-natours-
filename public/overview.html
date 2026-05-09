@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Local Marketplace</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="/js/main.js"></script>
+</head>
+<body data-page="overview">
+    <div class="app-shell">
+        <header class="app-header">
+            <a class="brand" href="/">Local Marketplace</a>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="/overview" data-nav="overview">Products</a>
+                <a href="/add-item" data-nav="add">Add Product</a>
+                <a href="/stats" data-nav="stats">Stats</a>
+            </nav>
+            <div class="auth-actions" data-auth-shell></div>
+        </header>
+
+        <main>
+            <div class="page-head">
+                <div>
+                    <h1>Products</h1>
+                    <p class="lead">Browse, filter, sort, edit, and delete marketplace listings.</p>
+                </div>
+                <a href="/add-item" class="button button--success">Add Product</a>
+            </div>
+
+            <form id="filterForm" class="filter-panel">
+                <div class="filter-grid">
+                    <div class="form-group">
+                        <label class="form-label" for="minPrice">Min Price</label>
+                        <input class="form-input" id="minPrice" name="minPrice" type="number" min="0" placeholder="0">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="maxPrice">Max Price</label>
+                        <input class="form-input" id="maxPrice" name="maxPrice" type="number" min="0" placeholder="100000">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="category">Category</label>
+                        <input class="form-input" id="category" name="category" list="categoryOptions" placeholder="Any">
+                        <datalist id="categoryOptions"></datalist>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="location">Location</label>
+                        <input class="form-input" id="location" name="location" list="locationOptions" placeholder="Any">
+                        <datalist id="locationOptions"></datalist>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="sortPrice">Sort</label>
+                        <select class="form-input" id="sortPrice" name="sortPrice">
+                            <option value="">Newest first</option>
+                            <option value="price">Price: low to high</option>
+                            <option value="-price">Price: high to low</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" aria-hidden="true">&nbsp;</label>
+                        <div class="button-row">
+                            <button class="button" type="submit">Apply</button>
+                            <button class="button button--secondary" type="button" data-clear-filters>Clear</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <p id="resultCount" class="message"></p>
+            <div id="product-list" class="cards-container"></div>
+        </main>
+    </div>
+</body>
+</html>

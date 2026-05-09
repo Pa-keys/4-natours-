@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+# Environment variables (NEVER push these)
+config.env
+.env
+# Logs
+*.log
+npm-debug.log
+# OS files
+.DS_Store
+Thumbs.db
+# Editor folders
+.vscode/
+# Old static design files (replaced by Pug views)
+starter/public/tour.html
+starter/public/overview.html

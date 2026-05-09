@@ -1,0 +1,92 @@
+[
+  {
+    "name": "iPhone 17 Pro Max",
+    "image": "📱",
+    "price": 86990,
+    "category": "Electronics",
+    "location": "SM Lipa",
+    "description": "The latest flagship iPhone with advanced titanium design.",
+    "seller": "Power Mac"
+  },
+  {
+    "name": "Macbook M4",
+    "image": "💻",
+    "price": 79990,
+    "category": "Electronics",
+    "location": "SM Lipa",
+    "description": "Next-generation M4 chip for extreme professional performance.",
+    "seller": "Power Mac"
+  },
+  {
+    "name": "Apple Watch Series 11",
+    "image": "⌚",
+    "price": 28490,
+    "category": "Electronics",
+    "location": "SM Lipa",
+    "description": "Advanced health tracking and a brighter always-on display.",
+    "seller": "Power Mac"
+  },
+  {
+    "name": "AirPods Max (2nd Gen)",
+    "image": "🎧",
+    "price": 32990,
+    "category": "Audio",
+    "location": "Makati",
+    "description": "Premium over-ear headphones with high-fidelity audio.",
+    "seller": "Apple Store"
+  },
+  {
+    "name": "iPad Pro 13-inch (M4)",
+    "image": "📱",
+    "price": 89990,
+    "category": "Electronics",
+    "location": "SM Lipa",
+    "description": "The thinnest Apple product ever with an Ultra Retina XDR display.",
+    "seller": "Power Mac"
+  },
+  {
+    "name": "Apple Studio Display",
+    "image": "🖥️",
+    "price": 104990,
+    "category": "Displays",
+    "location": "Lipa City",
+    "description": "Stunning 5K Retina display with 12MP Ultra Wide camera.",
+    "seller": "Power Mac"
+  },
+  {
+    "name": "Mac Studio",
+    "image": "🖥️",
+    "price": 138000,
+    "category": "Electronics",
+    "location": "Makati",
+    "description": "Compact desktop powerhouse for intensive creative workflows.",
+    "seller": "Power Mac"
+  },
+  {
+    "name": "Magic Mouse",
+    "image": "🖱️",
+    "price": 4390,
+    "category": "Accessories",
+    "location": "SM Lipa",
+    "description": "Wireless and rechargeable mouse with Multi-Touch surface.",
+    "seller": "Power Mac"
+  },
+  {
+    "name": "Magic Keyboard",
+    "image": "⌨️",
+    "price": 5490,
+    "category": "Accessories",
+    "location": "SM Lipa",
+    "description": "Remarkably comfortable and precise typing experience.",
+    "seller": "Power Mac"
+  },
+  {
+    "name": "Apple Pencil Pro",
+    "image": "✏️",
+    "price": 7990,
+    "category": "Accessories",
+    "location": "SM Lipa",
+    "description": "Engineered for pixel-perfect precision and industry-leading low latency.",
+    "seller": "Power Mac"
+  }
+]
