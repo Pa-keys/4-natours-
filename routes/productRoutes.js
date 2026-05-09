@@ -17,6 +17,6 @@ router.route('/')
 router.route('/:id')
   .get(authController.protect, productController.getProduct)
   .patch(authController.protect, productController.updateProduct)
-  .delete(authController.protect, productController.deleteProduct);
+  .delete(authController.protect, authController.restrictTo('admin'), productController.deleteProduct);
 
 module.exports = router;

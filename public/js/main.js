@@ -133,7 +133,15 @@
     return escapeHtml(product.image || '\uD83D\uDCE6');
   }
 
+  function canDeleteProducts() {
+    return currentUser && currentUser.role === 'admin';
+  }
+
   function productCard(product) {
+    const deleteButton = canDeleteProducts()
+      ? `<button class="button button--danger" type="button" data-delete-product="${escapeHtml(product._id)}">Delete</button>`
+      : '';
+
     return `
       <article class="product-card">
         <div class="product-symbol">${productSymbol(product)}</div>
@@ -144,7 +152,7 @@
         <div class="button-row">
           <a class="button" href="/item?id=${encodeURIComponent(product._id)}">View</a>
           <a class="button button--secondary" href="/add-item?id=${encodeURIComponent(product._id)}">Edit</a>
-          <button class="button button--danger" type="button" data-delete-product="${escapeHtml(product._id)}">Delete</button>
+          ${deleteButton}
         </div>
       </article>
     `;
@@ -420,6 +428,9 @@
     try {
       const result = await apiRequest(`/products/${encodeURIComponent(productId)}`);
       const product = result.data.product;
+      const deleteButton = canDeleteProducts()
+        ? `<button class="button button--danger" type="button" data-delete-product="${escapeHtml(product._id)}">Delete Product</button>`
+        : '';
 
       container.innerHTML = `
         <article class="detail-panel">
@@ -433,7 +444,7 @@
             <p>${escapeHtml(product.description)}</p>
             <div class="button-row">
               <a class="button button--secondary" href="/add-item?id=${encodeURIComponent(product._id)}">Edit Product</a>
-              <button class="button button--danger" type="button" data-delete-product="${escapeHtml(product._id)}">Delete Product</button>
+              ${deleteButton}
             </div>
           </div>
         </article>
