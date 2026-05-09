@@ -15,6 +15,7 @@ const globalErrorHandler = require('./controllers/errorControler');
 
 const app = express();
 
+app.set('trust proxy', 1);
 app.set('query parser', 'extended');
 
 app.use(helmet());
@@ -55,7 +56,16 @@ app.use(
   })
 );
 
-app.use(express.static(`${__dirname}/public`));
+app.get('/', (req, res) => {
+  res.status(200).json({
+    status: 'success',
+    message: 'Local Marketplace API is running',
+    frontend: `${req.protocol}://${req.get('host')}`,
+    documentation: '/api/v1/products'
+  });
+});
+
+app.use(express.static(`${__dirname}/public`, { index: false }));
 
 app.post('/api/v1/signup', authController.signup);
 app.post('/api/v1/login', authController.login);
@@ -70,7 +80,7 @@ app.delete('/api/v1/deleteMe', authController.protect, userController.deleteMe);
 app.use('/api/v1/products', productRouter);
 app.use('/api/v1/users', userRouter);
 
-app.get('/', (req, res) => res.status(200).sendFile(`${__dirname}/public/index.html`));
+app.get('/home', (req, res) => res.status(200).sendFile(`${__dirname}/public/index.html`));
 app.get('/overview', (req, res) => res.status(200).sendFile(`${__dirname}/public/overview.html`));
 app.get('/item', (req, res) => res.status(200).sendFile(`${__dirname}/public/item.html`));
 app.get('/add-item', (req, res) => res.status(200).sendFile(`${__dirname}/public/add-item.html`));
